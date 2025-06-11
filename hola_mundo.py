@@ -107,7 +107,24 @@ print(persona.keys())    # Imprime dict_keys(["nombre", "edad", "ciudad"])
 print(persona.values())  # Imprime dict_values(["Juan", 25, "Madrid"])
 print(persona.items())   # Imprime dict_items([("nombre", "Juan"), ("edad", 25), ("ciudad", "Madrid")])
 
+# Esto funciona por si no queremos modificar el diccionario Main y queremos agrear más datos
 persona.update({"profesion": "Ingeniero"})
 print(persona)  # Imprime {"nombre": "Juan", "edad": 25, "ciudad": "Madrid", "profesion": "Ingeniero"}
 persona.update({"chambea": True})
 print(persona)
+
+# Conjuntos
+conjunto1 = {1, 2, 3}
+conjunto2 = {3, 4, 5}
+
+union = conjunto1 | conjunto2
+print(union)  # Imprime {1, 2, 3, 4, 5}
+
+interseccion = conjunto1 & conjunto2
+print(interseccion)  # Imprime {3}
+
+diferencia = conjunto1 - conjunto2
+print(diferencia)  # Imprime {1, 2}
+
+diferencia_simetrica = conjunto1 ^ conjunto2
+print(diferencia_simetrica)  # Imprime {1, 2, 4, 5}
